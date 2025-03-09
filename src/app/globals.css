@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@import base;
+@import components;
+@import utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.font-barlow{
+    font-family: 'Barlow', sans-serif;
+}
+
+.font-poppins{
+    font-family: 'Poppins', sans-serif;
+}
