@@ -6,6 +6,10 @@ import { ThemeProvider } from "next-themes";
 // Global css
 import "./globals.css";
 
+
+// Clerk Provider
+import { ClerkProvider } from '@clerk/nextjs'
+
 // Fonts
 const barlowFont = Barlow({
   variable: "--font-barlow",
@@ -36,6 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ClerkProvider>
     <html lang="en">
       <body
         className={`${geistSans.variable} ${barlowFont.variable} ${geistMono.variable} antialiased`}>
@@ -44,5 +49,6 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
+    </ClerkProvider>
   );
 }
